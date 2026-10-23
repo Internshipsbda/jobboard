@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bermuda Internship Board | Internship Insights Co.</title>
-  <meta name="description" content="Every internship in Bermuda in one place — open roles, upcoming programmes and deadlines, checked daily by Internship Insights Co.">
+  <meta name="description" content="All internship opportunities in Bermuda in one place — open roles, upcoming programmes and deadlines, checked daily by Internship Insights Co.">
   <meta property="og:title" content="Bermuda Internship Board">
-  <meta property="og:description" content="Open internships, upcoming programmes and deadlines across Bermuda, checked daily.">
+  <meta property="og:description" content="All internship opportunities in Bermuda in one place, checked daily.">
   <link rel="icon" href="assets/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         <img src="assets/logo-mark.png" alt="" width="38" height="38">
         <span>Internship Insights Co.</span>
       </a>
-      <a class="header-link" href="#employers">Hiring an intern?</a>
+      <a class="header-link" href="post.html">Post an internship</a>
     </div>
   </header>
 
@@ -30,10 +30,10 @@
         <div>
           <p class="eyebrow">Bermuda internship board</p>
           <h1>Every internship in Bermuda, in one place.</h1>
-          <p class="lede">Bermuda's internships are scattered across firm websites, newspaper ads and programme pages — and most deadlines land months before summer. We check them every day so you don't miss one.</p>
+          <p class="lede">No more scrolling LinkedIn, forwarding emails or visiting company websites one by one. We check every employer, ad and programme page daily — so you see the role and the deadline before it's gone.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#listings">See open internships →</a>
-            <a class="btn btn-outline" href="https://students.internshipinsightsco.com/">Take the free assessment</a>
+            <a class="btn btn-outline" href="post.html">Post an internship</a>
           </div>
         </div>
         <aside class="closing-panel" aria-labelledby="closing-title">
@@ -53,7 +53,7 @@
         <label class="search">
           <span class="visually-hidden">Search internships</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          <input id="q" type="search" placeholder="Search by firm, role or field" autocomplete="off">
+          <input id="q" type="search" placeholder="Search by firm, role, field or eligibility" autocomplete="off">
         </label>
         <div class="segmented" role="group" aria-label="Status">
           <button type="button" data-status="all" aria-pressed="true">All<span class="count" id="c-all"></span></button>
@@ -61,6 +61,11 @@
           <button type="button" data-status="upcoming" aria-pressed="false">Opening soon<span class="count" id="c-upcoming"></span></button>
         </div>
         <div class="chips" id="chips" role="group" aria-label="Field"></div>
+        <div class="filter-row">
+          <label class="visually-hidden" for="loc">Location</label>
+          <select class="select" id="loc"><option value="">All locations</option></select>
+          <label class="toggle"><input type="checkbox" id="paid"> Paid only</label>
+        </div>
       </div>
     </div>
 
@@ -78,19 +83,21 @@
             <a class="btn btn-primary" href="https://students.internshipinsightsco.com/">Take the free assessment →</a>
           </div>
           <div class="band-card">
-            <h3>For employers</h3>
-            <p>Hiring interns in Bermuda? Check whether your internship environment sets them up to learn, then send us your role to be listed here.</p>
-            <a class="btn btn-primary" href="https://employers.internshipinsightsco.com/">Take the free diagnostic →</a>
+            <h3>Are you hiring?</h3>
+            <p>Post your opportunity for free. Showcase your company's impact, build your talent pipeline and put your programme in front of Bermuda's students.</p>
+            <a class="btn btn-primary" href="post.html">Post an internship →</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <dialog class="detail" id="detail" aria-labelledby="d-title"></dialog>
+
   <footer class="site-footer">
     <div class="wrap">
       <p>© <span id="year">2026</span> Internship Insights Co. — Unlocking potential through experience.</p>
-      <p>Listings link to the employer's or publisher's original posting. Always confirm details there before applying.</p>
+      <p>Listings link to the employer's or publisher's original posting. Logos belong to their owners. Always confirm details there before applying.</p>
     </div>
   </footer>
 

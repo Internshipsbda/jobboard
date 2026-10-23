@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Post an internship | Bermuda Internship Board</title>
+  <meta name="description" content="Post your Bermuda internship on the Internship Insights Co. board for free.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&family=Raleway:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="assets/logo-mark.png" alt="" width="38" height="38">
+        <span>Internship Insights Co.</span>
+      </a>
+      <a class="header-link" href="index.html">Browse internships</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="wrap">
+        <a class="back" href="index.html">← Back to the board</a>
+        <p class="eyebrow">For employers</p>
+        <h1>Are you hiring? Post your internship.</h1>
+        <p class="lede">Listing is free. Tell us about the role and we'll review it and add it to the board — usually within one working day.</p>
+      </div>
+    </section>
+
+    <div class="wrap form-layout">
+      <form name="post-internship" method="POST" action="/thanks.html" data-netlify="true" netlify-honeypot="company-fax">
+        <input type="hidden" name="form-name" value="post-internship">
+        <p class="hp"><label>Leave this empty <input name="company-fax" tabindex="-1" autocomplete="off"></label></p>
+
+        <section class="form-card">
+          <h2>Your organisation</h2>
+          <div class="fields">
+            <div class="field"><label for="f-company">Organisation name</label><input id="f-company" name="company" required autocomplete="organization"></div>
+            <div class="field"><label for="f-website">Website</label><input id="f-website" name="website" type="url" placeholder="https://" required></div>
+            <div class="field"><label for="f-contact">Your name</label><input id="f-contact" name="contact-name" required autocomplete="name"></div>
+            <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" required autocomplete="email"><span class="hint">We'll only use this to confirm your listing.</span></div>
+          </div>
+        </section>
+
+        <section class="form-card">
+          <h2>The internship</h2>
+          <div class="fields">
+            <div class="field wide"><label for="f-title">Role title</label><input id="f-title" name="title" required placeholder="e.g. Summer Underwriting Intern"></div>
+            <div class="field">
+              <label for="f-field">Field</label>
+              <select id="f-field" name="field" required>
+                <option value="">Choose a field</option>
+                <option>Accounting &amp; audit</option>
+                <option>Banking &amp; finance</option>
+                <option>Insurance &amp; reinsurance</option>
+                <option>Law</option>
+                <option>Technology</option>
+                <option>Health</option>
+                <option>Science &amp; environment</option>
+                <option>Public service &amp; community</option>
+                <option>Hospitality &amp; tourism</option>
+                <option>Marketing &amp; media</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-location">Location</label><input id="f-location" name="location" required placeholder="e.g. Hamilton"></div>
+            <div class="field"><label for="f-duration">Duration</label><input id="f-duration" name="duration" required placeholder="e.g. 10 weeks, June–August"></div>
+            <div class="field"><label for="f-start">Start date</label><input id="f-start" name="start-date" type="date"></div>
+            <div class="field"><label for="f-deadline">Application deadline</label><input id="f-deadline" name="deadline" type="date"><span class="hint">Leave blank if you hire on a rolling basis.</span></div>
+            <div class="field">
+              <span class="label" id="paid-label">Is it paid?</span>
+              <div class="radio-row" role="radiogroup" aria-labelledby="paid-label">
+                <label><input type="radio" name="paid" value="Paid" required> Paid</label>
+                <label><input type="radio" name="paid" value="Stipend"> Stipend</label>
+                <label><input type="radio" name="paid" value="Unpaid"> Unpaid</label>
+              </div>
+            </div>
+            <div class="field wide"><label for="f-desc">What the intern will do</label><textarea id="f-desc" name="description" required placeholder="Projects, teams they'll work with, who will supervise them"></textarea></div>
+            <div class="field wide"><label for="f-req">Who can apply</label><textarea id="f-req" name="requirements" placeholder="Year of study, subjects, Bermudian / PRC requirements, skills"></textarea></div>
+            <div class="field wide"><label for="f-benefits">What they'll get</label><textarea id="f-benefits" name="benefits" placeholder="Mentoring, training, a route to a graduate role"></textarea></div>
+            <div class="field wide"><label for="f-apply">How to apply</label><input id="f-apply" name="apply-link" required placeholder="Link to the posting, or an email address for applications"></div>
+          </div>
+          <div class="form-submit">
+            <button class="btn btn-primary" type="submit">Submit for review →</button>
+            <p>Every listing is reviewed before it goes live.</p>
+          </div>
+        </section>
+      </form>
+
+      <aside class="aside-card">
+        <h2>What happens next</h2>
+        <ol>
+          <li>We review your listing and check the details with you if anything's unclear.</li>
+          <li>It goes live on the board, in front of Bermuda's students.</li>
+          <li>Candidates apply to you directly, through your own link or email.</li>
+        </ol>
+        <hr>
+        <p>Most managers were never trained to supervise interns. Find out whether your environment sets them up to learn.</p>
+        <a class="btn btn-primary" href="https://employers.internshipinsightsco.com/">Take the free diagnostic</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 Internship Insights Co. — Unlocking potential through experience.</p>
+      <p>Bermuda's only internship transformation firm.</p>
+    </div>
+  </footer>
+</body>
+</html>
