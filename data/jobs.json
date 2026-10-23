@@ -608,6 +608,25 @@
       "source": "The Royal Gazette",
       "added": "2026-10-23",
       "domain": "royalgazette.com"
+    },
+    {
+      "id": "hamilton-re-summer",
+      "title": "Summer Intern Programme",
+      "company": "Hamilton Re",
+      "field": "Insurance & reinsurance",
+      "location": "Pembroke",
+      "season": "Summer 2027 · 8–10 weeks",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Past Bermuda cycles opened December–January; Hamilton's 2027 internships elsewhere opened 9 October",
+      "eligibility": "Undergraduates entering their junior year of university",
+      "paid": null,
+      "summary": "Hamilton's long-running Bermuda programme places a small group of university students with the reinsurer for the summer. Enquiries go to internship@hamiltongroup.com.",
+      "url": "https://bernews.com/2020/01/hamilton-re-invites-summer-intern-applications/",
+      "source": "Bernews / Hamilton",
+      "added": "2026-10-23",
+      "domain": "hamiltongroup.com"
     }
   ]
 }
