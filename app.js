@@ -36,17 +36,25 @@
   function avatar(j, extra) {
     var cls = 'avatar av-' + (hash(j.company) % 4) + (extra ? ' ' + extra : '');
     var img = j.domain
-      ? '<img src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(j.domain) + '&sz=128" alt="" loading="lazy" data-logo>'
+      ? '<img src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent(j.domain) + '&sz=128" alt="" loading="lazy" data-logo data-domain="' + esc(j.domain) + '">'
       : '';
     return '<span class="' + cls + '" aria-hidden="true"><span class="initials">' + esc(initials(j.company)) + '</span>' + img + '</span>';
   }
 
-  // Show a logo only when the employer has a real one; otherwise keep the monogram.
+  // Show a logo only when the employer has a usable one; try a second icon
+  // service before falling back to the monogram.
   function wireLogos(root) {
     root.querySelectorAll('img[data-logo]').forEach(function (img) {
-      function ok() { if (img.naturalWidth >= 32) img.parentNode.classList.add('has-logo'); else img.remove(); }
-      if (img.complete && img.naturalWidth) ok();
-      else { img.addEventListener('load', ok); img.addEventListener('error', function () { img.remove(); }); }
+      var triedBackup = false;
+      function fail() {
+        var dom = img.getAttribute('data-domain');
+        if (!triedBackup && dom) { triedBackup = true; img.src = 'https://icons.duckduckgo.com/ip3/' + encodeURIComponent(dom) + '.ico'; }
+        else img.remove();
+      }
+      function check() { if (img.naturalWidth >= 24) img.parentNode.classList.add('has-logo'); else fail(); }
+      img.addEventListener('load', check);
+      img.addEventListener('error', fail);
+      if (img.complete && img.naturalWidth) check();
     });
   }
 
@@ -57,7 +65,7 @@
   var lastFocus = null;
 
   var $ = function (id) { return document.getElementById(id); };
-  $('year').textContent = today.getFullYear();
+  document.querySelectorAll('.yr').forEach(function (e) { e.textContent = today.getFullYear(); });
   var dialog = $('detail');
 
   fetch('data/jobs.json', { cache: 'no-cache' })
