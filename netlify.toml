@@ -5,3 +5,10 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[headers]]
+  for = "/embed.js"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+    Access-Control-Allow-Origin = "*"
