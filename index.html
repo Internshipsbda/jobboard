@@ -1,13 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Internship Job Board Application</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bermuda Internship Board | Internship Insights Co.</title>
+  <meta name="description" content="Every internship in Bermuda in one place — open roles, upcoming programmes and deadlines, checked daily by Internship Insights Co.">
+  <meta property="og:title" content="Bermuda Internship Board">
+  <meta property="og:description" content="Open internships, upcoming programmes and deadlines across Bermuda, checked daily.">
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&family=Raleway:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="https://www.internshipinsightsco.com/">
+        <img src="assets/logo-mark.png" alt="" width="38" height="38">
+        <span>Internship Insights Co.</span>
+      </a>
+      <a class="header-link" href="#employers">Hiring an intern?</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Bermuda internship board</p>
+          <h1>Every internship in Bermuda, in one place.</h1>
+          <p class="lede">Bermuda's internships are scattered across firm websites, newspaper ads and programme pages — and most deadlines land months before summer. We check them every day so you don't miss one.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#listings">See open internships →</a>
+            <a class="btn btn-outline" href="https://students.internshipinsightsco.com/">Take the free assessment</a>
+          </div>
+        </div>
+        <aside class="closing-panel" aria-labelledby="closing-title">
+          <h2 id="closing-title">Coming up</h2>
+          <p class="panel-sub">The next deadlines and application windows.</p>
+          <ul class="closing-list" id="closing-list"></ul>
+          <div class="panel-foot">
+            <span><b id="open-count">–</b> open now · <b id="upcoming-count">–</b> opening soon</span>
+            <span id="updated">Updated daily</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="filters" id="listings">
+      <div class="wrap">
+        <label class="search">
+          <span class="visually-hidden">Search internships</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input id="q" type="search" placeholder="Search by firm, role or field" autocomplete="off">
+        </label>
+        <div class="segmented" role="group" aria-label="Status">
+          <button type="button" data-status="all" aria-pressed="true">All<span class="count" id="c-all"></span></button>
+          <button type="button" data-status="open" aria-pressed="false">Open now<span class="count" id="c-open"></span></button>
+          <button type="button" data-status="upcoming" aria-pressed="false">Opening soon<span class="count" id="c-upcoming"></span></button>
+        </div>
+        <div class="chips" id="chips" role="group" aria-label="Field"></div>
+      </div>
+    </div>
+
+    <section class="results" aria-live="polite">
+      <div class="wrap" id="results"></div>
+    </section>
+
+    <section class="band" id="employers">
+      <div class="wrap">
+        <h2>A listing gets you in the door. Preparation gets you the offer.</h2>
+        <div class="band-grid">
+          <div class="band-card">
+            <h3>For students</h3>
+            <p>Find out how ready you are for your first professional role with the Future Ready Talent Framework self-assessment. It takes about ten minutes.</p>
+            <a class="btn btn-primary" href="https://students.internshipinsightsco.com/">Take the free assessment →</a>
+          </div>
+          <div class="band-card">
+            <h3>For employers</h3>
+            <p>Hiring interns in Bermuda? Check whether your internship environment sets them up to learn, then send us your role to be listed here.</p>
+            <a class="btn btn-primary" href="https://employers.internshipinsightsco.com/">Take the free diagnostic →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2026</span> Internship Insights Co. — Unlocking potential through experience.</p>
+      <p>Listings link to the employer's or publisher's original posting. Always confirm details there before applying.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
 </html>
