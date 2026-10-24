@@ -3,6 +3,7 @@
 Static site deployed on Netlify (`internshipinsights-jobs`). No build step.
 
 - `data/jobs.json` — every listing. Add, edit or remove entries here.
+- `data/rejected.json` — items the owner has turned down (closed review PRs or removed listings). The daily search never suggests these again.
 - `index.html`, `styles.css`, `app.js` — the board, styled with the Internship Insights Co. design system. Each listing opens a shareable detail view at `#job/<id>`; logos come from each employer's site icon (`domain` field), falling back to a monogram.
 - `embed.js` — embeddable listings for the Squarespace site. Paste into a Code Block:
   `<div id="iic-jobboard" data-post-url="/opportunities"></div><script src="https://internshipinsights-jobs.netlify.app/embed.js" defer></script>`

@@ -1,0 +1,91 @@
+{
+  "note": "Items the owner has turned down. Never suggest or re-add these (match by employer + programme, or any listed URL).",
+  "items": [
+    {
+      "company": "AIG",
+      "programme": "2027 Early Careers Summer Intern, Multinational (Bermuda)",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-insurance/6378991"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Turned down in PR #1 (aggregator source)"
+    },
+    {
+      "company": "EY Bermuda",
+      "programme": "FSO Consulting 2027 Summer Internship",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-consulting/6282696",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-consulting/6264417"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Turned down in PR #1 (aggregator source; location doubtful)"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "HeadStart status change to Open based on iAgora 'Assurance - Intern (Summer 2027)'",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-management/6397146"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Turned down in PR #1 (aggregator source). The existing PwC HeadStart listing stays as it is"
+    },
+    {
+      "company": "EY Bermuda",
+      "programme": "FSO Tax Summer Internship 2027",
+      "id": "ey-fso-tax-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-legal/6272986",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-legal/6252209"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Removed from the board by the owner (aggregator-only source)"
+    },
+    {
+      "company": "EY Bermuda",
+      "programme": "Assurance (FSO) Summer Internship 2027",
+      "id": "ey-assurance-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/internships/consulting/bermuda",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-management/6272995",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-management/6252204"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Removed from the board by the owner (aggregator-only source)"
+    },
+    {
+      "company": "EY Bermuda",
+      "programme": "Actuarial Summer Internship 2027",
+      "id": "ey-actuarial-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/internships/consulting/bermuda",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-consulting/6272988",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-consulting/6252211"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Removed from the board by the owner (aggregator-only source)"
+    },
+    {
+      "company": "EY Bermuda",
+      "programme": "EY-Parthenon Summer Internship 2027",
+      "id": "ey-parthenon-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/internships/finance/bermuda",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-finance/6272989",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-finance/6252208"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Removed from the board by the owner (aggregator-only source)"
+    },
+    {
+      "company": "AIG",
+      "programme": "Underwriting Summer Intern 2027 — Financial Lines or Excess Casualty",
+      "id": "aig-underwriting-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/internships/at-AIG_Group-12378",
+        "https://www.iagora.com/work/en/offer/internship-bermuda-insurance/6378992"
+      ],
+      "rejected": "2026-10-24",
+      "reason": "Removed from the board by the owner (aggregator-only source)"
+    }
+  ]
+}
