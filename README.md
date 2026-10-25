@@ -13,4 +13,5 @@ Static site deployed on Netlify (`internshipinsights-jobs`). No build step.
 Listings are researched daily. **Verification rule (owner's):** a listing whose source is Bernews, The Royal Gazette, LinkedIn, or the employer's own website counts as verified and is published straight to `main`. Anything from another source (job aggregators, guides, employer form submissions) goes into a pull request for the owner to review; merging publishes it.
 
 Fields per listing: `id`, `title`, `company`, `field`, `location`, `season`, `status` (`open` | `upcoming`), `opens` / `deadline` (YYYY-MM-DD or null), `dateNote`, `eligibility`, `paid`, `summary` (own words, never copied), `domain` (employer website for the logo, or null), `url` (original posting), `source`, `added`.
+**Dead links (owner's rule):** if a listing's link returns a 404 / page not found, treat the job as not existing: never post it, and remove it from the board (add it to `data/removed.json`).
 Listings whose deadline has passed hide themselves automatically; `upcoming` listings flip to open on their `opens` date.
