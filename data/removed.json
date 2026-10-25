@@ -1,0 +1,8 @@
+{
+  "note": "Listings the owner removed. The daily search must not re-add these (same employer + programme), even if found again.",
+  "removed": [
+    {"id": "arch-re-bermuda", "company": "Arch Capital Group", "title": "Arch Re Summer Internship (Bermuda)", "removed": "2026-10-23"},
+    {"id": "chubb-legal-intern", "company": "Chubb Bermuda", "title": "Summer Placement — Legal Intern", "removed": "2026-10-23"},
+    {"id": "royal-gazette-finance-intern-2026-10", "company": "Employer named in the ad (Royal Gazette)", "title": "Finance Intern", "url": "https://www.royalgazette.com/jobs/article/20261022/finance-intern-2/", "removed": "2026-10-24"}
+  ]
+}
