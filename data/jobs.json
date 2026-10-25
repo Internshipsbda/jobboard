@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -608,6 +608,44 @@
       "source": "Bernews",
       "added": "2026-10-24",
       "domain": "cgcoralisle.com"
+    },
+    {
+      "id": "carigenetics-summer",
+      "title": "Summer Genetics Lab Internship",
+      "company": "CariGenetics",
+      "field": "Science & research",
+      "location": "Bermuda",
+      "season": "Summer 2027",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Dates for 2027 not announced yet — the 2026 programme ran about eight weeks over the summer",
+      "eligibility": "Students (criteria not published)",
+      "paid": null,
+      "summary": "Roughly two months inside Bermuda's own genomics lab: preparing and sequencing DNA, an introduction to pharmacogenetics, and conservation work tied to the Cahow recovery effort, all with mentoring from the lab team.",
+      "domain": null,
+      "url": "https://bernews.com/2026/09/carigenetics-concludes-2026-summer-internship/",
+      "source": "Bernews",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "mosaic-summer-internship",
+      "title": "Summer Internship Programme",
+      "company": "Mosaic Insurance",
+      "field": "Insurance & reinsurance",
+      "location": "Hamilton (other placements in London and the US)",
+      "season": "Summer 2027",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Dates for 2027 not announced yet — the programme has run every summer since 2021",
+      "eligibility": "Undergraduate students (criteria not published)",
+      "paid": null,
+      "summary": "Mosaic's yearly summer intake places students in teams such as underwriting, finance and marketing; in 2026 the Bermuda seat was in communications and marketing, with other interns in London, New York and Chicago.",
+      "domain": "mosaicinsurance.com",
+      "url": "https://bernews.com/2026/07/eight-students-join-mosaic-summer-internship/",
+      "source": "Bernews",
+      "added": "2026-10-25"
     }
   ]
 }
