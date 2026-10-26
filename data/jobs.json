@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -277,12 +277,12 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Apply through member companies",
+      "dateNote": "Each member firm sets its own deadline — for summer 2026 they ran from late January to April. The 2027 list isn't posted yet",
       "eligibility": "Bermudian students",
       "paid": true,
-      "summary": "Ten paid weeks at life insurance and reinsurance firms, with lunch-and-learns and networking events.",
-      "url": "https://bernews.com/2023/07/biltir-welcomes-record-number-of-interns",
-      "source": "Bernews",
+      "summary": "BILTIR publishes a yearly list of summer placements at its member life insurers and reinsurers (for 2026: firms such as Hannover Re, Fortitude Re, Resolution Life, Sun Life and Catalina), mostly in actuarial, finance and policy roles. You apply to each firm directly.",
+      "url": "https://biltir.bm/2024-summer-intern-opportunities",
+      "source": "BILTIR",
       "added": "2026-10-23",
       "domain": "biltir.bm"
     },
@@ -646,6 +646,44 @@
       "url": "https://bernews.com/2026/07/eight-students-join-mosaic-summer-internship/",
       "source": "Bernews",
       "added": "2026-10-25"
+    },
+    {
+      "id": "chubb-select-internship",
+      "title": "Chubb Select Internship",
+      "company": "Chubb Bermuda",
+      "field": "Insurance & reinsurance",
+      "location": "Hamilton",
+      "season": "Summer 2027 · 10 weeks",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "2027 dates not published yet — past cohorts ran from early June to mid-August",
+      "eligibility": "Bermudian university students interested in an insurance career",
+      "paid": null,
+      "summary": "Chubb's long-running Bermuda insurance internship, now past its tenth year. Interns rotate through different business units in their first summer, and some are invited back for a second summer in support functions.",
+      "domain": "chubb.com",
+      "url": "https://chubb.com/bm-en/careers/chubb-select-internship.html",
+      "source": "Chubb",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "nmb-12-month-internship",
+      "title": "12-Month Education & Curatorial Internship",
+      "company": "National Museum of Bermuda",
+      "field": "Public service & community",
+      "location": "Dockyard",
+      "season": "12 months (graduate)",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "The 2026 intake closed on 31 May 2026; the next intake has not been announced",
+      "eligibility": "Recent university graduates (any subject) who are Bermudian, a spouse of a Bermudian, or hold PRC status",
+      "paid": true,
+      "summary": "A paid year-long placement at the museum for a new graduate, covering education programmes, curatorial work and community outreach. Separate from the museum's short summer internship.",
+      "domain": "nmb.bm",
+      "url": "https://bernews.com/2026/05/crd-nmb-offering-internship-opportunity/",
+      "source": "Bernews",
+      "added": "2026-10-26"
     }
   ]
 }
