@@ -105,6 +105,16 @@
       ],
       "rejected": "2026-10-29",
       "reason": "Owner: work placements only. This is mainly sailing certification training, not a work placement"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "Assurance Co-op",
+      "id": "pwc-assurance-coop",
+      "urls": [
+        "https://jobs.accaglobal.com/job/14199786/assurance-co-op/"
+      ],
+      "rejected": "2026-10-29",
+      "reason": "Owner: the posting was only open for two days and has closed (the ACCA Careers copy still showed a 12 Nov closing date)"
     }
   ]
 }
