@@ -96,6 +96,15 @@
       ],
       "rejected": "2026-10-29",
       "reason": "Turned down by the owner in PR #2 (aggregator source; owner wants Bermuda-located roles only)"
+    },
+    {
+      "company": "Endeavour",
+      "programme": "Maritime Career Springboard Programme",
+      "urls": [
+        "https://bernews.com/2026/10/nine-bermudians-complete-maritime-programme/"
+      ],
+      "rejected": "2026-10-29",
+      "reason": "Owner: work placements only. This is mainly sailing certification training, not a work placement"
     }
   ]
 }
