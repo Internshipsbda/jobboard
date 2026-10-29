@@ -86,6 +86,25 @@
       ],
       "rejected": "2026-10-24",
       "reason": "Removed from the board by the owner (aggregator-only source)"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "U.S. Tax Intern",
+      "id": "pwc-us-tax-intern",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-legal/6528534"
+      ],
+      "rejected": "2026-10-29",
+      "reason": "Turned down by the owner in PR #2 (aggregator source; owner wants Bermuda-located roles only)"
+    },
+    {
+      "company": "Endeavour",
+      "programme": "Maritime Career Springboard Programme",
+      "urls": [
+        "https://bernews.com/2026/10/nine-bermudians-complete-maritime-programme/"
+      ],
+      "rejected": "2026-10-29",
+      "reason": "Owner: work placements only. This is mainly sailing certification training, not a work placement"
     }
   ]
 }
