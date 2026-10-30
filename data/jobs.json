@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -760,6 +760,25 @@
       "url": "https://bernews.com/2026/08/15-students-complete-skillcraft-internship/",
       "source": "Bernews",
       "added": "2026-10-28"
+    },
+    {
+      "id": "pwc-actuarial-intern-2027",
+      "title": "Actuarial Science Intern",
+      "company": "PwC Bermuda",
+      "field": "Actuarial",
+      "location": "Bermuda",
+      "season": "2027 (dates not stated)",
+      "status": "open",
+      "opens": null,
+      "deadline": "2026-12-31",
+      "dateNote": "Posted 30 October 2026; the listing gives 31 December 2026 as the posting end date. Programme dates and length are not stated",
+      "eligibility": "Bermudians, PRC holders, spouses of Bermudians or those with immigration permission to seek work; current bachelor's students in actuarial science or a related business subject with at least a 3.2 GPA",
+      "paid": null,
+      "summary": "An internship in PwC Bermuda's Actuarial Services team within Assurance, aimed at university students studying actuarial science or a similar subject. Strong Excel, Word and PowerPoint skills and good organisation are expected.",
+      "domain": "pwc.com",
+      "url": "https://www.iagora.com/work/en/offer/internship-bermuda-research/6536301",
+      "source": "iAgora",
+      "added": "2026-10-30"
     }
   ]
 }
