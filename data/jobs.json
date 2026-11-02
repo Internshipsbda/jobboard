@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -760,6 +760,25 @@
       "url": "https://bernews.com/2026/08/15-students-complete-skillcraft-internship/",
       "source": "Bernews",
       "added": "2026-10-28"
+    },
+    {
+      "id": "dwd-graduate-traineeship-2027",
+      "title": "Graduate Traineeship Programme 2026–27",
+      "company": "Government of Bermuda — Department of Workforce Development",
+      "field": "Public service & community",
+      "location": "Bermuda",
+      "season": "12 months from January 2027",
+      "status": "open",
+      "opens": null,
+      "deadline": "2026-11-13",
+      "dateNote": "Applications close Friday 13 November 2026; the programme starts 1 January 2027",
+      "eligibility": "Bermudians aged 18–26 with a bachelor's or master's degree, graduating in 2024, 2025 or 2026",
+      "paid": true,
+      "summary": "A year-long paid placement with a host employer that matches a recent graduate's qualifications. Six places are available, with priority given to allied health, IT, business administration, hospitality, the blue-green economy and skilled trades. It replaces the former Graduate Apprenticeship Programme.",
+      "domain": "gov.bm",
+      "url": "https://bernews.com/2026/11/2026-graduate-traineeship-applications-open/",
+      "source": "Bernews",
+      "added": "2026-11-02"
     }
   ]
 }
