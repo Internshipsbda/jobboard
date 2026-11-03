@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -760,6 +760,25 @@
       "url": "https://bernews.com/2026/08/15-students-complete-skillcraft-internship/",
       "source": "Bernews",
       "added": "2026-10-28"
+    },
+    {
+      "id": "renre-summer-2027",
+      "title": "2027 Summer Internship Program",
+      "company": "RenaissanceRe",
+      "field": "Insurance & reinsurance",
+      "location": "Pembroke",
+      "season": "Summer 2027",
+      "status": "open",
+      "opens": null,
+      "deadline": "2027-01-31",
+      "dateNote": "Applications open now; closing date 31 January 2027",
+      "eligibility": "Bermudian college and university students",
+      "paid": null,
+      "summary": "Summer placements at the Bermuda reinsurer, learning alongside experienced professionals. Teams include underwriting and risk, investments, capital partners, finance and accounting, legal and compliance, HR, operations, facilities, claims and IT.",
+      "url": "https://renre.wd503.myworkdayjobs.com/RenaissanceRe_Careers/job/Bermuda/Summer-Intern_JR3010",
+      "source": "LinkedIn / RenaissanceRe careers",
+      "added": "2026-11-02",
+      "domain": "renre.com"
     }
   ]
 }
