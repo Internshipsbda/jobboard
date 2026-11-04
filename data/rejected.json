@@ -115,6 +115,26 @@
       ],
       "rejected": "2026-10-29",
       "reason": "Owner: the posting was only open for two days and has closed (the ACCA Careers copy still showed a 12 Nov closing date)"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "Actuarial Science Intern",
+      "id": "pwc-actuarial-intern-2027",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-research/6536301"
+      ],
+      "rejected": "2026-11-04",
+      "reason": "Turned down in PR #3 (aggregator source)"
+    },
+    {
+      "company": "Chubb Bermuda",
+      "programme": "Summer Placement (Bermuda) 2027 — Chubb Tempest Life Re Finance Intern",
+      "id": "chubb-tempest-finance-intern-2027",
+      "urls": [
+        "https://jobs.accaglobal.com/job/14232041/summer-placement-bermuda-chubb-tempest-life-re-finance-intern/"
+      ],
+      "rejected": "2026-11-04",
+      "reason": "Turned down in PR #2 (aggregator source)"
     }
   ]
 }
