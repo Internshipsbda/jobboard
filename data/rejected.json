@@ -135,6 +135,16 @@
       ],
       "rejected": "2026-11-04",
       "reason": "Turned down in PR #2 (aggregator source)"
+    },
+    {
+      "company": "Chubb (all Chubb entities, incl. Chubb Bermuda and Chubb Tempest)",
+      "programme": "ALL Chubb internships and programmes",
+      "urls": [
+        "https://chubb.com/bm-en/careers/",
+        "https://www.chubb.com/bm-en/careers/"
+      ],
+      "rejected": "2026-11-04",
+      "reason": "Owner rule: no Chubb listings at all, from any source. Never suggest or add a Chubb role"
     }
   ]
 }
