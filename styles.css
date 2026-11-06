@@ -144,6 +144,7 @@ main { flex: 1; }
 .badge { display:inline-flex; align-items:center; border-radius: var(--radius-pill); padding: 5px 12px; font-family: var(--font-display); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; line-height: 1.2; }
 .badge-open { background: var(--orange); color: var(--ink); }
 .badge-upcoming { background: rgba(84,153,187,.15); color: var(--blue-800); }
+.badge-expected { background: transparent; color: var(--text-secondary); box-shadow: inset 0 0 0 1px currentColor; }
 .badge-new { background: var(--ink); color: var(--white); }
 .badge-field { background: var(--slate-50); color: var(--text-secondary); }
 .badge-urgent { background: var(--burnt-100); color: var(--burnt-900); }
@@ -241,6 +242,7 @@ dialog.detail[open] { animation: rise var(--dur-base) var(--ease); }
 .detail-head .badges { margin-top: var(--space-4); }
 .detail-head .badge-field { background: rgba(255,255,255,.14); color: var(--white); }
 .detail-head .badge-upcoming { background: rgba(255,255,255,.92); color: var(--blue-800); }
+.detail-head .badge-expected { color: rgba(255,255,255,.9); }
 .close { position:absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: var(--radius-pill); border: 0; background: rgba(255,255,255,.14); color: var(--white); display:grid; place-items:center; cursor: pointer; }
 .close:hover { background: rgba(255,255,255,.24); }
 .close svg { width: 18px; height: 18px; }

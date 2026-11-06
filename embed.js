@@ -50,7 +50,7 @@
     '.iicjb .job:hover{box-shadow:0 10px 28px rgba(14,26,35,.10);border-color:rgba(14,26,35,.18)}',
     '.iicjb .bdg{display:flex;flex-wrap:wrap;gap:6px}',
     '.iicjb .b{display:inline-flex;align-items:center;border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;line-height:1.2}',
-    '.iicjb .b-open{background:var(--o);color:var(--ink)}.iicjb .b-up{background:rgba(84,153,187,.15);color:var(--b8)}.iicjb .b-new{background:var(--ink);color:#fff}.iicjb .b-f{background:var(--s50);color:var(--sec)}.iicjb .b-soon{background:var(--burnt1);color:var(--burnt9)}',
+    '.iicjb .b-open{background:var(--o);color:var(--ink)}.iicjb .b-up{background:rgba(84,153,187,.15);color:var(--b8)}.iicjb .b-exp{background:transparent;color:var(--sec);box-shadow:inset 0 0 0 1px currentColor}.iicjb .b-new{background:var(--ink);color:#fff}.iicjb .b-f{background:var(--s50);color:var(--sec)}.iicjb .b-soon{background:var(--burnt1);color:var(--burnt9)}',
     '.iicjb .top{display:flex;gap:12px;align-items:center}',
     '.iicjb .co{margin:0;font-weight:600;font-size:14px;color:var(--sec);line-height:1.35}',
     '.iicjb .av{position:relative;overflow:hidden;flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:15px}',
@@ -86,7 +86,7 @@
     '.iicjb-d .dh .av{width:52px;height:52px;background:rgba(255,255,255,.14);color:#fff}.iicjb-d .dh .av.ok{background:#fff;border-color:transparent}',
     '.iicjb-d .dh .co{color:rgba(255,255,255,.88);margin:12px 0 2px}',
     '.iicjb-d .dh h2{margin:0;font-family:Raleway,sans-serif;font-weight:500;font-size:clamp(22px,3vw,28px);line-height:1.2;padding-right:40px;color:#fff;letter-spacing:normal}',
-    '.iicjb-d .dh .bdg{margin-top:14px}.iicjb-d .dh .b-f{background:rgba(255,255,255,.14);color:#fff}.iicjb-d .dh .b-up{background:rgba(255,255,255,.92)}',
+    '.iicjb-d .dh .bdg{margin-top:14px}.iicjb-d .dh .b-f{background:rgba(255,255,255,.14);color:#fff}.iicjb-d .dh .b-up{background:rgba(255,255,255,.92)}.iicjb-d .dh .b-exp{color:rgba(255,255,255,.9)}',
     '.iicjb-d .x{position:absolute;top:16px;right:16px;width:36px;height:36px;border-radius:999px;border:0;background:rgba(255,255,255,.16);color:#fff;display:grid;place-items:center;cursor:pointer}',
     '.iicjb-d .x svg{width:18px;height:18px}',
     '.iicjb-d .db{padding:24px;display:grid;gap:20px}.iicjb-d .db p{margin:0}',
@@ -225,7 +225,7 @@
     function byDate(k) { return function (a, b) { var x = a[k], y = b[k]; if (x && y) return x - y; if (x) return -1; if (y) return 1; return (b._a || 0) - (a._a || 0); }; }
     function badges(j) {
       var o = j.status === 'open';
-      var s = '<span class="b ' + (o ? 'b-open">Open now' : 'b-up">Opening soon') + '</span>';
+      var s = '<span class="b ' + (o ? 'b-open">Open now' : (j.expected ? 'b-exp">Expected 2027 · dates TBC' : 'b-up">Opening soon')) + '</span>';
       if (j._a && (today - j._a) / DAY <= 2) s += '<span class="b b-new">New</span>';
       if (j._d && (j._d - today) / DAY <= 21) s += '<span class="b b-soon">Closing soon</span>';
       return s + '<span class="b b-f">' + esc(j.field) + '</span>';

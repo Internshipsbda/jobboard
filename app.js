@@ -210,7 +210,7 @@
 
   function badgesFor(j) {
     var isOpen = j.status === 'open';
-    var b = '<span class="badge ' + (isOpen ? 'badge-open">Open now' : 'badge-upcoming">Opening soon') + '</span>';
+    var b = '<span class="badge ' + (isOpen ? 'badge-open">Open now' : (j.expected ? 'badge-expected">Expected 2027 · dates TBC' : 'badge-upcoming">Opening soon')) + '</span>';
     if (j._added && (today - j._added) / DAY <= 2) b += '<span class="badge badge-new">New</span>';
     if (j._deadline && (j._deadline - today) / DAY <= 21) b += '<span class="badge badge-urgent">Closing soon</span>';
     return b;

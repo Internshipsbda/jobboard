@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -34,8 +34,8 @@
       "eligibility": "Law students",
       "paid": true,
       "summary": "Walkers' annual programme gives students real exposure to legal practice in Bermuda. The firm also runs a pupillage programme.",
-      "url": "https://bernews.com/2026/08/walkers-welcomes-eight-legal-interns/",
-      "source": "Bernews",
+      "url": "https://www.walkersglobal.com/en/Join-Us/Training-Programme/Bermuda-Legal-Internship",
+      "source": "Walkers",
       "added": "2026-10-23",
       "domain": "walkersglobal.com"
     },
@@ -87,11 +87,11 @@
       "status": "upcoming",
       "opens": "2027-01-01",
       "deadline": "2027-03-31",
-      "dateNote": "Applications open 1 January",
+      "dateNote": "Conyers sets an annual 31 March deadline for its Bermuda summer law internship; applications typically open in January",
       "eligibility": "Law students and recent law graduates with a strong academic record",
       "paid": true,
       "summary": "Eight weeks working alongside Conyers lawyers on live matters, from research and drafting to client meetings and court.",
-      "url": "https://www.conyers.com/publications/view/conyers-welcomes-2026-bermuda-summer-law-students/",
+      "url": "https://www.conyers.com/scholarships",
       "source": "Conyers",
       "added": "2026-10-23",
       "domain": "conyers.com"
@@ -102,18 +102,19 @@
       "company": "Conyers",
       "field": "Law",
       "location": "Hamilton",
-      "season": "Summer · Gap year 3–6 months",
+      "season": "2027 · summer placement or 3–6-month gap year",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates not yet announced",
+      "dateNote": "Not yet confirmed for 2027",
       "eligibility": "Bermudian students; gap-year places for recent graduates or students pausing their studies",
       "paid": true,
       "summary": "Non-legal placements across the firm's departments, plus a paid gap-year internship for students taking a year out.",
       "url": "https://www.conyers.com/scholarships",
       "source": "Conyers",
       "added": "2026-10-23",
-      "domain": "conyers.com"
+      "domain": "conyers.com",
+      "expected": true
     },
     {
       "id": "butterfield-summer",
@@ -123,16 +124,17 @@
       "location": "Hamilton",
       "season": "Summer 2027 · June–August",
       "status": "upcoming",
-      "opens": "2027-01-07",
-      "deadline": "2027-03-01",
-      "dateNote": "Expected to open January 2027",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Not yet confirmed for 2027. Butterfield's 2026 round opened on 7 January and closed on 1 March",
       "eligibility": "Eligible students — see Butterfield's careers page",
       "paid": true,
       "summary": "Paid hands-on experience in banking and financial services. Last year's applications opened in early January and closed 1 March.",
       "url": "https://bernews.com/2026/01/butterfield-opens-2026-talent-programmes",
       "source": "Bernews",
       "added": "2026-10-23",
-      "domain": "butterfieldgroup.com"
+      "domain": "butterfieldgroup.com",
+      "expected": true
     },
     {
       "id": "bzs-stempel",
@@ -182,14 +184,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Last year's deadline was 1 April",
+      "dateNote": "Not yet confirmed for 2027. Last year's deadline was 1 April",
       "eligibility": "Bermudians and PRC holders",
       "paid": null,
       "summary": "Ocean, climate and environmental research placements with a faculty mentor. Academic credit is possible through your university.",
       "url": "https://bios.asu.edu/education/bermuda-program",
       "source": "ASU BIOS",
       "added": "2026-10-23",
-      "domain": "asu.edu"
+      "domain": "asu.edu",
+      "expected": true
     },
     {
       "id": "bios-nsf-reu",
@@ -201,14 +204,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Applications expected to open late January or early February 2027, subject to NSF funding renewal",
+      "dateNote": "Not yet confirmed for 2027. Applications expected to open late January or early February 2027, subject to NSF funding renewal",
       "eligibility": "U.S. citizens or permanent residents aged 18+, enrolled as undergraduates before and after the programme",
       "paid": true,
       "summary": "Fully funded research internships mentored by BIOS scientists, with presentations, workshops and field trips.",
       "url": "https://bios.asu.edu/education/nsf-reu",
       "source": "ASU BIOS",
       "added": "2026-10-23",
-      "domain": "asu.edu"
+      "domain": "asu.edu",
+      "expected": true
     },
     {
       "id": "carey-olsen-bermuda",
@@ -220,14 +224,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Last year's deadline was 31 January",
+      "dateNote": "Not yet confirmed for 2027. Last year's deadline was 31 January",
       "eligibility": "Bermudian or PRC holders aged 18+ interested in law",
       "paid": true,
       "summary": "A paid internship at an offshore law firm, working on live client matters with lawyers at every level.",
       "url": "https://www.careyolsen.com/node/5574",
       "source": "Carey Olsen",
       "added": "2026-10-23",
-      "domain": "careyolsen.com"
+      "domain": "careyolsen.com",
+      "expected": true
     },
     {
       "id": "ils-bermuda-education",
@@ -239,14 +244,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Last year's deadline was 9 January",
+      "dateNote": "Not yet confirmed for 2027. Last year's deadline was 9 January",
       "eligibility": "Students — see ILS Bermuda for each host's criteria",
       "paid": true,
       "summary": "Paid summer placements in insurance-linked securities with host firms that have included Marsh, the Bermuda Monetary Authority and Hiscox ILS.",
       "url": "https://ilsbermuda.com/education-initiative",
       "source": "ILS Bermuda",
       "added": "2026-10-23",
-      "domain": "ilsbermuda.com"
+      "domain": "ilsbermuda.com",
+      "expected": true
     },
     {
       "id": "abir-member-internships",
@@ -258,14 +264,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Apply through member companies",
+      "dateNote": "Not yet confirmed for 2027. Apply through member companies",
       "eligibility": "Bermudian students",
       "paid": true,
       "summary": "Around 100 paid placements each summer across member firms such as AIG, Arch, Chubb, Everest, Hiscox, PartnerRe and RenaissanceRe.",
       "url": "https://business.abir.bm/news/Details/abir-members-host-108-paid-summer-interns-218204",
       "source": "ABIR",
       "added": "2026-10-23",
-      "domain": "abir.bm"
+      "domain": "abir.bm",
+      "expected": true
     },
     {
       "id": "biltir-intern-programme",
@@ -273,18 +280,19 @@
       "company": "Bermuda International Long Term Insurers & Reinsurers",
       "field": "Insurance & reinsurance",
       "location": "Hamilton",
-      "season": "Summer · 10 weeks",
+      "season": "Summer 2027 · 10 weeks",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Each member firm sets its own deadline — for summer 2026 they ran from late January to April. The 2027 list isn't posted yet",
+      "dateNote": "Not yet confirmed for 2027. Each member firm sets its own deadline — for summer 2026 they ran from late January to April. The 2027 list isn't posted yet",
       "eligibility": "Bermudian students",
       "paid": true,
       "summary": "BILTIR publishes a yearly list of summer placements at its member life insurers and reinsurers (for 2026: firms such as Hannover Re, Fortitude Re, Resolution Life, Sun Life and Catalina), mostly in actuarial, finance and policy roles. You apply to each firm directly.",
       "url": "https://biltir.bm/2024-summer-intern-opportunities",
       "source": "BILTIR",
       "added": "2026-10-23",
-      "domain": "biltir.bm"
+      "domain": "biltir.bm",
+      "expected": true
     },
     {
       "id": "pwc-headstart",
@@ -296,14 +304,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates not yet announced",
+      "dateNote": "Not yet confirmed for 2027",
       "eligibility": "Bermudian students",
       "paid": true,
       "summary": "PwC's summer programme for Bermudian students, with on-the-job training and a possible path to a full-time role.",
       "url": "http://www.pwc.com/bermudacareers",
       "source": "PwC",
       "added": "2026-10-23",
-      "domain": "pwc.com"
+      "domain": "pwc.com",
+      "expected": true
     },
     {
       "id": "appleby-summer",
@@ -315,14 +324,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates not yet announced",
+      "dateNote": "Not yet confirmed for 2027. Appleby's page gives an annual 28 February closing date; the 2026 programme ran 17 June – 14 August",
       "eligibility": "Students interested in law, or corporate and fiduciary services",
       "paid": null,
       "summary": "Legal interns rotate departments every two weeks with a lawyer mentor; AGS interns rotate through corporate admin, compliance and onboarding.",
-      "url": "https://www.applebyglobal.com/news/appleby-welcomes-nine-new-and-returning-summer-interns-in-bermuda/",
+      "url": "https://www.applebyglobal.com/scholarships-bursaries-internships",
       "source": "Appleby",
       "added": "2026-10-23",
-      "domain": "applebyglobal.com"
+      "domain": "applebyglobal.com",
+      "expected": true
     },
     {
       "id": "gov-london-office",
@@ -330,18 +340,19 @@
       "company": "Government of Bermuda",
       "field": "Public service & community",
       "location": "London, UK",
-      "season": "Graduate programme",
+      "season": "2027 intake · graduate programme",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Last call opened February 2026",
+      "dateNote": "Not yet confirmed for 2027. Last call opened February 2026",
       "eligibility": "Bermudian graduates",
       "paid": null,
       "summary": "Support Bermuda's diplomacy with the UK, the EU and international bodies from the Government's London office.",
       "url": "https://bernews.com/2026/02/london-office-invites-internship-applications/",
       "source": "Bernews",
       "added": "2026-10-23",
-      "domain": "gov.bm"
+      "domain": "gov.bm",
+      "expected": true
     },
     {
       "id": "nmb-summer",
@@ -349,18 +360,19 @@
       "company": "National Museum of Bermuda",
       "field": "Public service & community",
       "location": "Dockyard",
-      "season": "Summer · 4 or 8 weeks",
+      "season": "Summer 2027 · 4 or 8 weeks",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "No deadline listed; the 2026 round notified successful applicants in May",
+      "dateNote": "Not yet confirmed for 2027. No deadline listed; the 2026 round notified successful applicants in May",
       "eligibility": "Undergraduate or graduate students and recent graduates",
       "paid": null,
       "summary": "Collections management, conservation, research and exhibit work. Paid and unpaid places are offered.",
       "url": "https://nmb.bm/get-involved/volunteering-careers/summer-internships",
       "source": "NMB",
       "added": "2026-10-23",
-      "domain": "nmb.bm"
+      "domain": "nmb.bm",
+      "expected": true
     },
     {
       "id": "bermuda-is-love",
@@ -368,18 +380,19 @@
       "company": "Bermuda Is Love",
       "field": "Public service & community",
       "location": "Hamilton",
-      "season": "Summer · 2 weeks",
+      "season": "Summer 2027 · 2 weeks",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates not yet announced",
+      "dateNote": "Not yet confirmed for 2027",
       "eligibility": "High school or university students and recent graduates based in Bermuda",
       "paid": true,
       "summary": "A short paid internship in advocacy and community campaigns. Last year paid $21.43 an hour for two places.",
       "url": "https://bernews.com/2026/06/bermuda-love-launches-internship-programme/",
       "source": "Bernews",
       "added": "2026-10-23",
-      "domain": "bermudaislove.com"
+      "domain": "bermudaislove.com",
+      "expected": true
     },
     {
       "id": "royal-gazette-newsroom",
@@ -387,18 +400,19 @@
       "company": "The Royal Gazette",
       "field": "Public service & community",
       "location": "Hamilton",
-      "season": "Summer",
+      "season": "Summer 2027",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Enquire by email any time",
+      "dateNote": "Not yet confirmed for 2027. Enquire by email any time",
       "eligibility": "Bermudian students interested in journalism or media",
       "paid": null,
       "summary": "Reporting and social-media tracks with the island's daily newspaper. The article explains how to get in touch.",
       "url": "https://www.royalgazette.com/general/news/article/20260714/interns-get-a-taste-of-gazette-newsroom/",
       "source": "The Royal Gazette",
       "added": "2026-10-23",
-      "domain": "royalgazette.com"
+      "domain": "royalgazette.com",
+      "expected": true
     },
     {
       "id": "hamilton-re-summer",
@@ -467,14 +481,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "2026 registration closed 31 December 2025; the 2027 call has not been announced yet",
+      "dateNote": "Not yet confirmed for 2027. 2026 registration closed 31 December 2025; the 2027 call has not been announced yet",
       "eligibility": "Bermudians enrolled in college or university (2026 cycle required a 2.7+ GPA)",
       "paid": null,
       "summary": "The Government places Bermudian college and university students with host employers for paid summer work experience; 102 students were placed in 2026.",
       "url": "https://www.dwd.bm/youth-employment-strategy/",
       "source": "Department of Workforce Development",
       "added": "2026-10-23",
-      "domain": "gov.bm"
+      "domain": "gov.bm",
+      "expected": true
     },
     {
       "id": "dolphin-quest-internship",
@@ -543,14 +558,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "No dates published; the firm invites Bermudian law students to contact HR about summer work",
+      "dateNote": "Not yet confirmed for 2027. No dates published; the firm invites Bermudian law students to contact HR about summer work",
       "eligibility": "Bermudian law students",
       "paid": null,
       "summary": "A summer introduction to legal practice at the Hamilton law firm. Enquiries go to the firm's HR operations manager, listed on its careers page.",
       "url": "https://mjm.bm/careers/",
       "source": "MJM",
       "added": "2026-10-24",
-      "domain": "mjm.bm"
+      "domain": "mjm.bm",
+      "expected": true
     },
     {
       "id": "bfm-argus-summer",
@@ -562,14 +578,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Runs every summer from June to August; the 2027 application window hasn't been announced",
+      "dateNote": "Not yet confirmed for 2027. Runs every summer from June to August",
       "eligibility": "Students",
       "paid": null,
       "summary": "An annual programme run by Allshores (the group behind BF&M and Argus) that placed 18 interns in Bermuda in 2026, some returning for a second summer, across marketing, IT, finance, property and casualty, employee benefits and legal and compliance, alongside development sessions and networking events.",
       "url": "https://bernews.com/2026/08/allshores-celebrates-summer-internship-success/",
       "source": "Bernews",
       "added": "2026-10-24",
-      "domain": "bfm.bm"
+      "domain": "bfm.bm",
+      "expected": true
     },
     {
       "id": "belco-summer-students",
@@ -581,14 +598,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Recurring summer programme; 2027 dates and application process not yet announced",
+      "dateNote": "Not yet confirmed for 2027. Recurring summer programme",
       "eligibility": "University and college students (BELCO scholarship recipients have taken part)",
       "paid": null,
       "summary": "Summer placements at Bermuda's electric utility (17 students in 2026) across engineering, IT, human resources and operations, open to new and returning students from universities overseas and Bermuda College.",
       "url": "https://bernews.com/2026/07/17-students-complete-belco-internships/",
       "source": "Bernews",
       "added": "2026-10-24",
-      "domain": "belco.bm"
+      "domain": "belco.bm",
+      "expected": true
     },
     {
       "id": "cg-insurance-summer",
@@ -600,14 +618,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "The 2026 window ran from February to 30 April 2026; 2027 dates not yet announced",
+      "dateNote": "Not yet confirmed for 2027. The 2026 window ran from February to 30 April 2026",
       "eligibility": "Bermudian college students or recent graduates",
       "paid": null,
       "summary": "An in-person summer programme at CG's Reid Street office, rotating through property and casualty, medical, compliance, finance, marketing and legal, plus a group-wide project.",
       "url": "https://bernews.com/2026/02/cg-opens-2026-summer-internship-applications/",
       "source": "Bernews",
       "added": "2026-10-24",
-      "domain": "cgcoralisle.com"
+      "domain": "cgcoralisle.com",
+      "expected": true
     },
     {
       "id": "carigenetics-summer",
@@ -619,14 +638,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates for 2027 not announced yet — the 2026 programme ran about eight weeks over the summer",
+      "dateNote": "Not yet confirmed for 2027. The 2026 programme ran about eight weeks over the summer",
       "eligibility": "Students (criteria not published)",
       "paid": null,
       "summary": "Roughly two months inside Bermuda's own genomics lab: preparing and sequencing DNA, an introduction to pharmacogenetics, and conservation work tied to the Cahow recovery effort, all with mentoring from the lab team.",
       "domain": null,
       "url": "https://bernews.com/2026/09/carigenetics-concludes-2026-summer-internship/",
       "source": "Bernews",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "expected": true
     },
     {
       "id": "mosaic-summer-internship",
@@ -638,14 +658,15 @@
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "Dates for 2027 not announced yet — the programme has run every summer since 2021",
+      "dateNote": "Not yet confirmed for 2027. The programme has run every summer since 2021",
       "eligibility": "Undergraduate students (criteria not published)",
       "paid": null,
       "summary": "Mosaic's yearly summer intake places students in teams such as underwriting, finance and marketing; in 2026 the Bermuda seat was in communications and marketing, with other interns in London, New York and Chicago.",
       "domain": "mosaicinsurance.com",
       "url": "https://bernews.com/2026/07/eight-students-join-mosaic-summer-internship/",
       "source": "Bernews",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "expected": true
     },
     {
       "id": "nmb-12-month-internship",
@@ -653,18 +674,19 @@
       "company": "National Museum of Bermuda",
       "field": "Public service & community",
       "location": "Dockyard",
-      "season": "12 months (graduate)",
+      "season": "2027 intake · 12 months (graduate)",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "The 2026 intake closed on 31 May 2026; the next intake has not been announced",
+      "dateNote": "Not yet confirmed for 2027. The 2026 intake closed on 31 May 2026; the next intake has not been announced",
       "eligibility": "Recent university graduates (any subject) who are Bermudian, a spouse of a Bermudian, or hold PRC status",
       "paid": true,
       "summary": "A paid year-long placement at the museum for a new graduate, covering education programmes, curatorial work and community outreach. Separate from the museum's short summer internship.",
       "domain": "nmb.bm",
       "url": "https://bernews.com/2026/05/crd-nmb-offering-internship-opportunity/",
       "source": "Bernews",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "expected": true
     },
     {
       "id": "appleby-abl-winter-2026",
@@ -710,18 +732,19 @@
       "company": "Convex",
       "field": "Insurance & reinsurance",
       "location": "Bermuda",
-      "season": "Summer · 8 weeks",
+      "season": "Summer 2027 · 8 weeks",
       "status": "upcoming",
       "opens": null,
       "deadline": null,
-      "dateNote": "2027 dates not announced yet. For 2026, Bermuda applications ran 1–28 February, with interviews in March–April and the programme from 29 June to 21 August",
+      "dateNote": "Not yet confirmed for 2027. For 2026, Bermuda applications ran 1–28 February, with interviews in March–April and the programme from 29 June to 21 August",
       "eligibility": "Students and entry-level candidates looking for a first role; no formal criteria are published",
       "paid": null,
       "summary": "Convex places summer interns in one team for eight weeks, alongside development sessions and a group project. Applying takes a CV and a short written answer, followed by a virtual interview and then an in-person one with the team.",
       "domain": "convexin.com",
       "url": "https://convexin.com/life-at-convex/careers/intern-programme/",
       "source": "Convex",
-      "added": "2026-10-28"
+      "added": "2026-10-28",
+      "expected": true
     },
     {
       "id": "skillcraft-youth-internship",
