@@ -51,6 +51,22 @@
       "url": "https://chubb.com/bm-en/careers/chubb-select-internship.html",
       "removed": "2026-11-04",
       "reason": "Owner removed it: no Chubb listings on the board"
+    },
+    {
+      "id": "appleby-abl-winter-2026",
+      "company": "Appleby",
+      "title": "Winter Legal Internship 2026 (Appleby Bermuda Ltd)",
+      "url": "https://appleby-recruitment.azurewebsites.net/1511/2026-ABL-Winter-Intern",
+      "removed": "2026-11-08",
+      "reason": "Posting no longer listed on Appleby's own recruitment site (appleby-recruitment.azurewebsites.net, checked 2026-11-08); December 2026 programme, applications presumed closed"
+    },
+    {
+      "id": "appleby-ags-winter-2026",
+      "company": "Appleby",
+      "title": "Winter Internship 2026 (Appleby Global Services)",
+      "url": "https://appleby-recruitment.azurewebsites.net/1512/2026-AGS-Winter-Intern",
+      "removed": "2026-11-08",
+      "reason": "Posting no longer listed on Appleby's own recruitment site (appleby-recruitment.azurewebsites.net, checked 2026-11-08); December 2026 programme, applications presumed closed"
     }
   ]
 }
