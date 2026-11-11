@@ -145,6 +145,16 @@
       ],
       "rejected": "2026-11-04",
       "reason": "Owner rule: no Chubb listings at all, from any source. Never suggest or add a Chubb role"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "Risk Assurance Intern",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-management/6543486",
+        "https://jobs.accaglobal.com/job/14249117/risk-assurance-intern/"
+      ],
+      "rejected": "2026-11-11",
+      "reason": "Turned down in PR #5 (aggregator source)"
     }
   ]
 }
