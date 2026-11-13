@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-13",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -783,6 +783,26 @@
       "url": "https://bernews.com/2026/11/dwd-launches-hospitality-immersion-programme/",
       "source": "Bernews",
       "added": "2026-11-05"
+    },
+    {
+      "id": "bermudair-aviation-internship",
+      "title": "Aviation Internship Program",
+      "company": "BermudAir",
+      "field": "Aviation & travel",
+      "location": "Bermuda",
+      "season": "Summer 2027 · 12 weeks",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Not yet confirmed for 2027. Last year's applications closed 15 May (2026). Pay isn't stated.",
+      "eligibility": "Bermudian students aged 18–24 with at least a 3.0 GPA",
+      "paid": null,
+      "summary": "A 12-week summer rotation through the airline's operation: maintenance and engineering, flight operations, ground operations, customer experience, commercial and revenue, and safety and compliance. Applicants send a CV, cover letter and transcript to the airline's HR team.",
+      "domain": "flybermudair.com",
+      "url": "https://www.flybermudair.com/en/bermudair-internship",
+      "source": "BermudAir",
+      "added": "2026-11-13",
+      "expected": true
     }
   ]
 }
