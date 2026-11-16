@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-16",
   "jobs": [
     {
       "id": "deloitte-coop",
@@ -802,6 +802,26 @@
       "url": "https://www.flybermudair.com/en/bermudair-internship",
       "source": "BermudAir",
       "added": "2026-11-13",
+      "expected": true
+    },
+    {
+      "id": "ben-summer-internship",
+      "title": "Summer Teaching Internship",
+      "company": "Bermuda Education Network (BEN)",
+      "field": "Public service & community",
+      "location": "Bermuda",
+      "season": "Summer 2027",
+      "status": "upcoming",
+      "opens": null,
+      "deadline": null,
+      "dateNote": "Not yet confirmed for 2027. BEN's page says the 2026 round is closed and gives no dates for next summer; contact BEN to ask when applications reopen.",
+      "eligibility": "Not stated; aimed at students and young people considering a career in education",
+      "paid": null,
+      "summary": "Interns help run BEN's summer learning programme for children: assisting lead teachers with lessons and reading tutorials, planning break-time games, and teaching small groups skills like dictation and fluency. They pick up classroom management, lesson planning and assessment experience, and there is an optional paid placement in a public school classroom.",
+      "domain": "bermudaeducationnetwork.com",
+      "url": "https://www.bermudaeducationnetwork.com/apply-for-an-internship/",
+      "source": "Bermuda Education Network",
+      "added": "2026-11-16",
       "expected": true
     }
   ]
