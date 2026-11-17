@@ -823,6 +823,25 @@
       "source": "Bermuda Education Network",
       "added": "2026-11-16",
       "expected": true
+    },
+    {
+      "id": "marsh-bermuda-summer-2027",
+      "title": "Summer Internship Program",
+      "company": "Marsh Bermuda",
+      "field": "Insurance & reinsurance",
+      "location": "Bermuda",
+      "season": "Summer 2027",
+      "status": "open",
+      "opens": null,
+      "deadline": "2027-01-03",
+      "dateNote": "Applications open now; deadline 3 January 2027",
+      "eligibility": "Students interested in insurance and risk management",
+      "paid": null,
+      "summary": "Hands-on summer experience in insurance and risk management at Marsh Bermuda, learning from experienced professionals and contributing to real projects.",
+      "url": "https://lnkd.in/gnQwxJZs",
+      "source": "LinkedIn (Lindsay Roos, CEO, Bowring Marsh Bermuda)",
+      "added": "2026-11-16",
+      "domain": "marsh.com"
     }
   ]
 }
