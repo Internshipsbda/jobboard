@@ -164,6 +164,17 @@
       ],
       "rejected": "2026-11-18",
       "reason": "Turned down in PR #8. Owner's rule: never propose anything sourced from iAgora"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "Marketing & Communications Intern",
+      "id": "pwc-marketing-comms-intern",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-marketing/6583524",
+        "https://islandjobhunt.com/jobs/402779661-marketing-communications-intern"
+      ],
+      "rejected": "2026-11-17",
+      "reason": "Turned down in PR #8 (aggregator source)"
     }
   ]
 }
