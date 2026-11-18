@@ -2,7 +2,7 @@
  * Bermuda Internship Board — embeddable listings for internshipinsightsco.com
  * Usage (Squarespace Code Block):
  *   <div id="iic-jobboard"></div>
- *   <script src="https://internshipinsights-jobs.netlify.app/embed.js" defer></script>
+ *   <script src="https://jobboard.internshipinsightsco.com/embed.js" defer></script>
  * Options on the div: data-post-url="/opportunities" (link for employers).
  */
 (function () {
@@ -11,7 +11,7 @@
   window.__iicJobBoard = true;
 
   var script = document.currentScript || (function () { var s = document.getElementsByTagName('script'); return s[s.length - 1]; })();
-  var BASE = (script && script.src) ? script.src.replace(/embed\.js(\?.*)?$/, '') : 'https://internshipinsights-jobs.netlify.app/';
+  var BASE = (script && script.src) ? script.src.replace(/embed\.js(\?.*)?$/, '') : 'https://jobboard.internshipinsightsco.com/';
   var STUDENT_URL = 'https://students.internshipinsightsco.com/';
 
   var CSS = [

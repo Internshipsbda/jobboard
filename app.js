@@ -310,7 +310,7 @@
     wireLogos(dialog);
     dialog.querySelector('.close').addEventListener('click', function () { dialog.close(); });
     $('copy').addEventListener('click', function () {
-      var url = location.origin + location.pathname + '#job/' + encodeURIComponent(j.id);
+      var url = location.origin + '/internships/' + encodeURIComponent(j.id) + '/';
       var label = $('copy').querySelector('span');
       function done() { label.textContent = 'Link copied'; setTimeout(function () { label.textContent = 'Copy link'; }, 2000); }
       if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { label.textContent = url; });

@@ -1,12 +1,12 @@
 # Bermuda Internship Board — Internship Insights Co.
 
-Static site deployed on Netlify (`internshipinsights-jobs`). No build step.
+Static site deployed on Netlify (`internshipinsights-jobs`), live at https://jobboard.internshipinsightsco.com. Netlify runs `node scripts/build.mjs` on every push: it copies the site into `dist/` and generates a page per listing (`/internships/<id>/`, with Google for Jobs markup on open listings), `sitemap.xml` and `robots.txt`. Only edit the source files, never `dist/`.
 
 - `data/jobs.json` — every listing. Add, edit or remove entries here.
 - `data/rejected.json` — items the owner has turned down (closed review PRs or removed listings). The daily search never suggests these again.
 - `index.html`, `styles.css`, `app.js` — the board, styled with the Internship Insights Co. design system. Each listing opens a shareable detail view at `#job/<id>`; logos come from each employer's site icon (`domain` field), falling back to a monogram.
 - `embed.js` — embeddable listings for the Squarespace site. Paste into a Code Block:
-  `<div id="iic-jobboard" data-post-url="/opportunities"></div><script src="https://internshipinsights-jobs.netlify.app/embed.js" defer></script>`
+  `<div id="iic-jobboard" data-post-url="/opportunities"></div><script src="https://jobboard.internshipinsightsco.com/embed.js" defer></script>`
   It reads `data/jobs.json` live, so the embed updates whenever the board does.
 - `post.html` / `thanks.html` — the free "Post an internship" form for employers (Netlify Forms, form name `post-internship`). Submissions are reviewed in the daily pull request before going live.
 
