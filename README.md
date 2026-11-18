@@ -1,6 +1,6 @@
 # Bermuda Internship Board — Internship Insights Co.
 
-Static site deployed on Netlify (`internshipinsights-jobs`), live at https://jobboard.internshipinsightsco.com. Netlify runs `node scripts/build.mjs` on every push: it copies the site into `dist/` and generates a page per listing (`/internships/<id>/`, with Google for Jobs markup on open listings), `sitemap.xml` and `robots.txt`. Only edit the source files, never `dist/`.
+Static site deployed on Netlify (project `jobboard-internshipinsightsco`, site id 6fa05803-9af6-4f40-83ba-b0837a4b0aa4), live at https://jobboard.internshipinsightsco.com. Netlify runs `node scripts/build.mjs` on every push: it copies the site into `dist/` and generates a page per listing (`/internships/<id>/`, with Google for Jobs markup on open listings), `sitemap.xml` and `robots.txt`. Only edit the source files, never `dist/`.
 
 - `data/jobs.json` — every listing. Add, edit or remove entries here.
 - `data/rejected.json` — items the owner has turned down (closed review PRs or removed listings). The daily search never suggests these again.
