@@ -1,5 +1,5 @@
 {
-  "note": "Items the owner has turned down. Never suggest or re-add these (match by employer + programme, or any listed URL).",
+  "note": "Items the owner has turned down. Never suggest or re-add these (match by employer + programme, or any listed URL). Owner's rule (2026-11-18): never propose or publish anything sourced from iAgora, not even in a review PR.",
   "items": [
     {
       "company": "AIG",
@@ -155,6 +155,15 @@
       ],
       "rejected": "2026-11-11",
       "reason": "Turned down in PR #5 (aggregator source)"
+    },
+    {
+      "company": "PwC Bermuda",
+      "programme": "Marketing & Communications Intern",
+      "urls": [
+        "https://www.iagora.com/work/en/offer/internship-bermuda-marketing/6583524"
+      ],
+      "rejected": "2026-11-18",
+      "reason": "Turned down in PR #8. Owner's rule: never propose anything sourced from iAgora"
     }
   ]
 }
