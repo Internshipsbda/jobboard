@@ -50,7 +50,8 @@
     '.iicjb .job:hover{box-shadow:0 10px 28px rgba(14,26,35,.10);border-color:rgba(14,26,35,.18)}',
     '.iicjb .bdg{display:flex;flex-wrap:wrap;gap:6px}',
     '.iicjb .b{display:inline-flex;align-items:center;border-radius:999px;padding:5px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;line-height:1.2}',
-    '.iicjb .b-open{background:var(--o);color:var(--ink)}.iicjb .b-up{background:rgba(84,153,187,.15);color:var(--b8)}.iicjb .b-exp{background:transparent;color:var(--sec);box-shadow:inset 0 0 0 1px currentColor}.iicjb .b-new{background:var(--ink);color:#fff}.iicjb .b-f{background:var(--s50);color:var(--sec)}.iicjb .b-soon{background:var(--burnt1);color:var(--burnt9)}',
+    '.iicjb .b-open{background:var(--o);color:var(--ink)}.iicjb .b-up{background:rgba(84,153,187,.15);color:var(--b8)}.iicjb .b-exp{background:transparent;color:var(--sec);box-shadow:inset 0 0 0 1px currentColor}.iicjb .b-new{background:var(--ink);color:#fff}.iicjb .b-f{background:var(--s50);color:var(--sec)}.iicjb .b-soon{background:var(--burnt1);color:var(--burnt9)}.iicjb .b-closed{background:var(--s50);color:var(--sec);box-shadow:inset 0 0 0 1px rgba(14,26,35,.18)}',
+    '.iicjb .job.cl{background:var(--s50)}.iicjb .job.cl .av{filter:grayscale(1);opacity:.8}.iicjb .ci{margin-top:40px;padding-top:24px;border-top:1px solid var(--line)}.iicjb .ci .gt{margin-top:0;color:var(--sec)}.iicjb .ci p{margin:-8px 0 16px;color:var(--sec);font-size:15px;max-width:62ch}',
     '.iicjb .top{display:flex;gap:12px;align-items:center}',
     '.iicjb .co{margin:0;font-weight:600;font-size:14px;color:var(--sec);line-height:1.35}',
     '.iicjb .av{position:relative;overflow:hidden;flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-weight:800;font-size:15px}',
@@ -183,15 +184,16 @@
       jobs = (data.jobs || []).map(function (j) {
         j._d = parse(j.deadline); j._o = parse(j.opens); j._a = parse(j.added);
         if (j.status === 'upcoming' && j._o && j._o <= today) j.status = 'open';
-        j._x = !!(j._d && j._d < today);
+        if (j.status === 'closed' || (j._d && j._d < today)) j.status = 'closed';
         j._h = [j.title, j.company, j.field, j.location, j.season, j.eligibility, j.summary].join(' ').toLowerCase();
         return j;
-      }).filter(function (j) { return !j._x; });
+      });
       jobs.forEach(function (j) { byId[j.id] = j; });
       var fields = [], locs = [];
       jobs.forEach(function (j) { if (fields.indexOf(j.field) < 0) fields.push(j.field); if (j.location && locs.indexOf(j.location) < 0) locs.push(j.location); });
       locs.sort();
-      var open = jobs.filter(function (j) { return j.status === 'open'; }).length;
+      var cnt = function (x) { return jobs.filter(function (j) { return j.status === x; }).length; };
+      var open = cnt('open'), upc = cnt('upcoming'), cls = cnt('closed');
 
       mount.innerHTML =
         '<div class="f">' +
@@ -199,7 +201,8 @@
           '<div class="seg" role="group" aria-label="Status">' +
             '<button type="button" data-s="all" aria-pressed="true">All<span class="c">' + jobs.length + '</span></button>' +
             '<button type="button" data-s="open" aria-pressed="false">Open now<span class="c">' + open + '</span></button>' +
-            '<button type="button" data-s="upcoming" aria-pressed="false">Opening soon<span class="c">' + (jobs.length - open) + '</span></button>' +
+            '<button type="button" data-s="upcoming" aria-pressed="false">Opening soon<span class="c">' + upc + '</span></button>' +
+            '<button type="button" data-s="closed" aria-pressed="false">Closed<span class="c">' + cls + '</span></button>' +
           '</div>' +
           '<div class="chips" role="group" aria-label="Field"><button type="button" class="chip" data-fl="" aria-pressed="true">All fields</button>' +
             fields.map(function (f) { return '<button type="button" class="chip" data-fl="' + esc(f) + '" aria-pressed="false">' + esc(f) + '</button>'; }).join('') + '</div>' +
@@ -225,17 +228,18 @@
     function byDate(k) { return function (a, b) { var x = a[k], y = b[k]; if (x && y) return x - y; if (x) return -1; if (y) return 1; return (b._a || 0) - (a._a || 0); }; }
     function badges(j) {
       var o = j.status === 'open';
+      if (j.status === 'closed') return '<span class="b b-closed">Closed</span><span class="b b-f">' + esc(j.field) + '</span>';
       var s = '<span class="b ' + (o ? 'b-open">Open now' : (j.expected ? 'b-exp">Expected 2027 · dates TBC' : 'b-up">Opening soon')) + '</span>';
       if (j._a && (today - j._a) / DAY <= 2) s += '<span class="b b-new">New</span>';
       if (j._d && (j._d - today) / DAY <= 21) s += '<span class="b b-soon">Closing soon</span>';
       return s + '<span class="b b-f">' + esc(j.field) + '</span>';
     }
-    function dline(j) { return j._d ? 'Apply by ' + fmt(j._d) : (j._o && j._o > today ? 'Opens ' + fmt(j._o) : (j.dateNote || '')); }
+    function dline(j) { if (j.status === 'closed') return j._d ? 'Closed ' + fmt(j._d) : 'Applications closed'; return j._d ? 'Apply by ' + fmt(j._d) : (j._o && j._o > today ? 'Opens ' + fmt(j._o) : (j.dateNote || '')); }
 
     function card(j) {
-      var o = j.status === 'open', soon = j._d && (j._d - today) / DAY <= 21;
+      var o = j.status === 'open', soon = j.status !== 'closed' && j._d && (j._d - today) / DAY <= 21;
       var meta = '<li>' + I.cal + '<span>' + esc(j.season) + '</span></li><li>' + I.pin + '<span>' + esc(j.location) + '</span></li><li>' + I.user + '<span>' + esc(j.eligibility) + '</span></li>' + (j.paid === true ? '<li>' + I.wallet + '<span>Paid</span></li>' : '');
-      return '<article class="job">' +
+      return '<article class="job' + (j.status === 'closed' ? ' cl' : '') + '">' +
         '<div class="bdg">' + badges(j) + '</div>' +
         '<div class="top">' + avatar(j) + '<p class="co">' + esc(j.company) + '</p></div>' +
         '<h3><button type="button" data-open="' + esc(j.id) + '">' + esc(j.title) + '</button></h3>' +
@@ -255,19 +259,22 @@
         return true;
       });
       var o = list.filter(function (j) { return j.status === 'open'; }).sort(byDate('_d'));
-      var u = list.filter(function (j) { return j.status !== 'open'; }).sort(byDate('_o'));
-      var h = '<div class="hd"><h2>' + list.length + (list.length === 1 ? ' internship' : ' internships') + '</h2><p>Soonest dates first · updated daily</p></div>';
+      var u = list.filter(function (j) { return j.status === 'upcoming'; }).sort(byDate('_o'));
+      var c = list.filter(function (j) { return j.status === 'closed'; }).sort(function (a, b) { return (b._d || 0) - (a._d || 0); });
+      var lv = list.length - c.length;
+      var h = '<div class="hd"><h2>' + (lv || !c.length ? lv + (lv === 1 ? ' internship' : ' internships') : c.length + ' closed') + '</h2><p>Soonest dates first · updated daily</p></div>';
       if (!list.length) { res.innerHTML = h + '<div class="empty"><h3>No internships match those filters</h3><p>Try a different word, or clear the filters to see everything.</p></div>'; return; }
       if (o.length) h += (u.length ? '<h3 class="gt">Open now</h3>' : '') + '<div class="grid">' + o.map(card).join('') + '</div>';
       if (u.length) h += (o.length ? '<h3 class="gt">Opening soon</h3>' : '') + '<div class="grid">' + u.map(card).join('') + '</div>';
+      if (c.length) h += '<div class="ci"><h3 class="gt">Closed: watch for next year</h3><p>These have closed for this round. Most run every year, so note when they opened and set a reminder for next year.</p></div><div class="grid">' + c.map(card).join('') + '</div>';
       res.innerHTML = h; wireLogos(res);
     }
 
     function openDetail(j) {
       if (!j) return;
       var o = j.status === 'open';
-      var s1 = j._o ? fmt(j._o) : (o ? 'Open now' : 'To be announced');
-      var s2 = j._d ? fmt(j._d) : (/rolling|year-round/i.test(j.dateNote || '') ? 'Rolling' : 'Not stated');
+      var s1 = j._o ? fmt(j._o) : (o ? 'Open now' : j.status === 'closed' ? 'Closed for this round' : 'To be announced');
+      var s2 = j._d ? fmt(j._d) : j.status === 'closed' ? 'Closed' : (/rolling|year-round/i.test(j.dateNote || '') ? 'Rolling' : 'Not stated');
       dlg.innerHTML =
         '<div class="dh"><button type="button" class="x" aria-label="Close">' + I.x + '</button>' + avatar(j) +
           '<p class="co">' + esc(j.company) + '</p><h2>' + esc(j.title) + '</h2><div class="bdg">' + badges(j) + '</div></div>' +

@@ -81,21 +81,24 @@
       j._opens = parse(j.opens);
       j._added = parse(j.added);
       if (j.status === 'upcoming' && j._opens && j._opens <= today) j.status = 'open';
-      j._expired = !!(j._deadline && j._deadline < today);
+      // Closed = marked closed, or the deadline has passed. Closed listings stay on the board
+      // (in their own section) so students can see what to watch for next year.
+      if (j.status === 'closed' || (j._deadline && j._deadline < today)) j.status = 'closed';
       j._hay = [j.title, j.company, j.field, j.location, j.season, j.eligibility, j.summary].join(' ').toLowerCase();
       return j;
-    }).filter(function (j) { return !j._expired; });
+    });
     jobs.forEach(function (j) { byId[j.id] = j; });
 
     var up = parse(data.updated);
     $('updated').textContent = up ? 'Updated ' + fmt(up) : 'Updated daily';
 
-    var open = jobs.filter(function (j) { return j.status === 'open'; }).length;
+    var open = count('open'), upcoming = count('upcoming'), closed = count('closed');
     $('open-count').textContent = open;
-    $('upcoming-count').textContent = jobs.length - open;
+    $('upcoming-count').textContent = upcoming;
     $('c-all').textContent = jobs.length;
     $('c-open').textContent = open;
-    $('c-upcoming').textContent = jobs.length - open;
+    $('c-upcoming').textContent = upcoming;
+    $('c-closed').textContent = closed;
 
     renderClosing();
     renderChips();
@@ -105,9 +108,12 @@
     route();
   }
 
+  function count(s) { return jobs.filter(function (j) { return j.status === s; }).length; }
+
   function renderClosing() {
     var events = [];
     jobs.forEach(function (j) {
+      if (j.status === 'closed') return;
       if (j._deadline) events.push({ d: j._deadline, kind: 'Closes', j: j });
       if (j._opens && j._opens > today) events.push({ d: j._opens, kind: 'Opens', j: j });
     });
@@ -180,9 +186,11 @@
     });
 
     var open = list.filter(function (j) { return j.status === 'open'; }).sort(byDate('_deadline'));
-    var upcoming = list.filter(function (j) { return j.status !== 'open'; }).sort(byDate('_opens'));
+    var upcoming = list.filter(function (j) { return j.status === 'upcoming'; }).sort(byDate('_opens'));
+    var closed = list.filter(function (j) { return j.status === 'closed'; }).sort(function (a, b) { return (b._deadline || 0) - (a._deadline || 0); });
 
-    var head = '<div class="results-head"><h2>' + list.length + (list.length === 1 ? ' internship' : ' internships') + '</h2>' +
+    var live = list.length - closed.length;
+    var head = '<div class="results-head"><h2>' + (live || !closed.length ? live + (live === 1 ? ' internship' : ' internships') : closed.length + ' closed') + '</h2>' +
       '<p>Soonest dates first</p></div>';
 
     if (!list.length) {
@@ -196,6 +204,9 @@
     var html = head;
     if (open.length) html += (upcoming.length ? '<h3 class="group-title">Open now</h3>' : '') + '<div class="grid">' + open.map(card).join('') + '</div>';
     if (upcoming.length) html += (open.length ? '<h3 class="group-title">Opening soon</h3>' : '') + '<div class="grid">' + upcoming.map(card).join('') + '</div>';
+    if (closed.length) html += '<div class="closed-intro"><h3 class="group-title">Closed: watch for next year</h3>' +
+      '<p>These have closed for this round. Most run every year, so note when they opened and set a reminder for next year.</p></div>' +
+      '<div class="grid">' + closed.map(card).join('') + '</div>';
     $('results').innerHTML = html;
     wireLogos($('results'));
   }
@@ -210,6 +221,7 @@
 
   function badgesFor(j) {
     var isOpen = j.status === 'open';
+    if (j.status === 'closed') return '<span class="badge badge-closed">Closed</span>';
     var b = '<span class="badge ' + (isOpen ? 'badge-open">Open now' : (j.expected ? 'badge-expected">Expected 2027 · dates TBC' : 'badge-upcoming">Opening soon')) + '</span>';
     if (j._added && (today - j._added) / DAY <= 2) b += '<span class="badge badge-new">New</span>';
     if (j._deadline && (j._deadline - today) / DAY <= 21) b += '<span class="badge badge-urgent">Closing soon</span>';
@@ -217,6 +229,7 @@
   }
 
   function dateLineFor(j) {
+    if (j.status === 'closed') return j._deadline ? 'Closed ' + fmt(j._deadline) : 'Applications closed';
     if (j._deadline) return 'Apply by ' + fmt(j._deadline);
     if (j._opens && j._opens > today) return 'Opens ' + fmt(j._opens);
     return j.dateNote || '';
@@ -224,7 +237,7 @@
 
   function card(j) {
     var isOpen = j.status === 'open';
-    var soon = j._deadline && (j._deadline - today) / DAY <= 21;
+    var soon = j.status !== 'closed' && j._deadline && (j._deadline - today) / DAY <= 21;
     var dateLine = dateLineFor(j);
 
     var meta = '<li>' + ICONS.calendar + '<span>' + esc(j.season) + '</span></li>' +
@@ -232,7 +245,7 @@
       '<li>' + ICONS.user + '<span>' + esc(j.eligibility) + '</span></li>';
     if (j.paid === true) meta += '<li>' + ICONS.wallet + '<span>Paid</span></li>';
 
-    return '<article class="job' + (isOpen ? '' : ' is-upcoming') + '" id="' + esc(j.id) + '">' +
+    return '<article class="job' + (isOpen ? '' : j.status === 'closed' ? ' is-upcoming is-closed' : ' is-upcoming') + '" id="' + esc(j.id) + '">' +
       '<div class="badges">' + badgesFor(j) + '<span class="badge badge-field">' + esc(j.field) + '</span></div>' +
       '<div class="job-top">' + avatar(j) + '<p class="job-company">' + esc(j.company) + '</p></div>' +
       '<h3><a href="#job/' + esc(j.id) + '">' + esc(j.title) + '</a></h3>' +
@@ -258,8 +271,9 @@
 
   function openDetail(j) {
     var isOpen = j.status === 'open';
-    var stepOpen = j._opens ? fmt(j._opens) : (isOpen ? 'Open now' : 'To be announced');
-    var stepClose = j._deadline ? fmt(j._deadline) : (j.dateNote && /rolling|year-round/i.test(j.dateNote) ? 'Rolling' : 'Not stated');
+    var isClosed = j.status === 'closed';
+    var stepOpen = j._opens ? fmt(j._opens) : (isOpen ? 'Open now' : isClosed ? 'Closed for this round' : 'To be announced');
+    var stepClose = j._deadline ? fmt(j._deadline) : isClosed ? 'Closed' : (j.dateNote && /rolling|year-round/i.test(j.dateNote) ? 'Rolling' : 'Not stated');
 
     dialog.innerHTML =
       '<div class="detail-head">' +
@@ -280,6 +294,7 @@
           '<div class="fact"><dt>Location</dt><dd>' + esc(j.location) + '</dd></div>' +
           '<div class="fact"><dt>Pay</dt><dd>' + (j.paid === true ? 'Paid' : j.paid === false ? 'Unpaid' : 'Not stated') + '</dd></div>' +
           '<div class="fact wide"><dt>Who can apply</dt><dd>' + esc(j.eligibility) + '</dd></div>' +
+          (isClosed ? '<div class="fact wide"><dt>Next year</dt><dd>Applications have closed for this round. Check back around the same time next year, and keep an eye on the employer’s careers page.</dd></div>' : '') +
           (j.dateNote ? '<div class="fact wide"><dt>Timing</dt><dd>' + esc(j.dateNote) + '</dd></div>' : '') +
         '</dl>' +
         '<div class="prep"><p>Before you apply, see how ready you are for your first professional role. <a href="https://students.internshipinsightsco.com/" target="_blank" rel="noopener">Take the free FRTF self-assessment →</a></p></div>' +
