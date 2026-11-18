@@ -67,6 +67,22 @@
       "url": "https://appleby-recruitment.azurewebsites.net/1512/2026-AGS-Winter-Intern",
       "removed": "2026-11-08",
       "reason": "Posting no longer listed on Appleby's own recruitment site (appleby-recruitment.azurewebsites.net, checked 2026-11-08); December 2026 programme, applications presumed closed"
+    },
+    {
+      "id": "deloitte-coop",
+      "company": "Deloitte Bermuda",
+      "title": "Co-op Internships (Bermudian students)",
+      "url": "https://www.deloitte.com/cbc/en/careers/bm-student-experience-hub/bm-interns-and-coops.html",
+      "removed": "2026-11-18",
+      "reason": "Owner removed it: Deloitte's posting isn't live yet. OK to re-add once Deloitte publishes a live 2027 posting on its own site or LinkedIn"
+    },
+    {
+      "id": "deloitte-deep",
+      "company": "Deloitte Bermuda",
+      "title": "DEEP Summer Internship",
+      "url": "https://www.deloitte.com/cbc/en/careers/explore-your-fit/students/summer-internship-program.html",
+      "removed": "2026-11-18",
+      "reason": "Owner removed it: Deloitte's posting isn't live yet. OK to re-add once Deloitte publishes a live 2027 posting on its own site or LinkedIn"
     }
   ]
 }

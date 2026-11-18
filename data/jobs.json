@@ -2,25 +2,6 @@
   "updated": "2026-11-18",
   "jobs": [
     {
-      "id": "deloitte-coop",
-      "title": "Co-op Internships (Bermudian students)",
-      "company": "Deloitte Bermuda",
-      "field": "Accounting & audit",
-      "location": "Hamilton",
-      "season": "Year-round",
-      "status": "open",
-      "opens": null,
-      "deadline": null,
-      "dateNote": "Rolling — year-round",
-      "eligibility": "Bermudian students enrolled in a registered university co-op programme",
-      "paid": true,
-      "summary": "Part-time paid placements that count toward your degree's co-op requirement, coached by a senior in your service line.",
-      "url": "https://www.deloitte.com/cbc/en/careers/bm-student-experience-hub/bm-interns-and-coops.html",
-      "source": "Deloitte careers",
-      "added": "2026-10-23",
-      "domain": "deloitte.com"
-    },
-    {
       "id": "walkers-legal-2027",
       "title": "Summer 2027 Legal Internship",
       "company": "Walkers",
@@ -57,25 +38,6 @@
       "source": "KPMG careers",
       "added": "2026-10-23",
       "domain": "kpmg.com"
-    },
-    {
-      "id": "deloitte-deep",
-      "title": "DEEP Summer Internship",
-      "company": "Deloitte Bermuda",
-      "field": "Accounting & audit",
-      "location": "Hamilton",
-      "season": "Summer 2027 · 6–8 weeks",
-      "status": "upcoming",
-      "opens": "2027-02-01",
-      "deadline": "2027-04-15",
-      "dateNote": "Applications open 1 February",
-      "eligibility": "Students interested in audit, tax, technology, finance or talent",
-      "paid": true,
-      "summary": "Deloitte's Exclusive Experience Program: paid summer work plus a regional project with interns from across the Caribbean and Bermuda.",
-      "url": "https://www.deloitte.com/cbc/en/careers/explore-your-fit/students/summer-internship-program.html",
-      "source": "Deloitte careers",
-      "added": "2026-10-23",
-      "domain": "deloitte.com"
     },
     {
       "id": "conyers-summer-law-2027",
