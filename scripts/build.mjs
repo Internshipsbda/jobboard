@@ -36,6 +36,8 @@ function statusOf(j) {
 }
 const LABEL = { open: 'Open now', upcoming: 'Opening soon', closed: 'Closed' };
 const pageUrl = (j) => `${SITE}/internships/${encodeURIComponent(j.id)}/`;
+const slug = (f) => String(f).toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const fieldPath = (f) => `/internships-in-bermuda/${slug(f)}/`;
 
 // Shared header/footer, taken from index.html so the pages always match the board
 const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
@@ -127,6 +129,7 @@ ${lds.map((l) => `  <script type="application/ld+json">${JSON.stringify(l).repla
           <a class="btn btn-primary" href="${esc(safeUrl(j.url))}" target="_blank" rel="noopener">${st === 'open' ? 'Apply on the original posting' : 'View programme details'} →</a>
           <span class="src">Source: ${esc(j.source)}</span>
         </div>
+        <p class="job-page-more"><a href="${fieldPath(j.field)}">More ${esc(j.field.toLowerCase())} internships in Bermuda →</a></p>
         <div class="prep"><p>Before you apply, see how ready you are for your first professional role. <a href="https://students.internshipinsightsco.com/" target="_blank" rel="noopener">Take the free FRTF self-assessment →</a></p></div>
       </article>
     </div></div>
@@ -143,19 +146,89 @@ for (const j of jobs) {
   fs.writeFileSync(path.join(dir, 'index.html'), jobPage(j));
 }
 
-// Crawlable links on the board itself (app.js overwrites #results once listings load)
+// One landing page per field, e.g. /internships-in-bermuda/law/ ("Law internships in Bermuda")
+const fields = [...new Set(jobs.map((j) => j.field))].sort();
 const order = { open: 0, upcoming: 1, closed: 2 };
+function fieldPage(field) {
+  const list = jobs.filter((j) => j.field === field).sort((a, b) => order[statusOf(a)] - order[statusOf(b)] || (a.deadline || '9').localeCompare(b.deadline || '9'));
+  const nOpen = list.filter((j) => statusOf(j) === 'open').length;
+  const url = SITE + fieldPath(field);
+  const h1 = `${field} internships in Bermuda`;
+  const desc = `${list.length} ${field.toLowerCase()} internships and student programmes in Bermuda` + (nOpen ? `, ${nOpen} open now` : '') +
+    `: ${[...new Set(list.map((j) => j.company))].slice(0, 5).join(', ')}. Deadlines and eligibility, checked daily.`;
+  const ld = [{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Bermuda Internship Board', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: h1, item: url }] },
+    { '@context': 'https://schema.org', '@type': 'ItemList', name: h1,
+      itemListElement: list.map((j, i) => ({ '@type': 'ListItem', position: i + 1, url: pageUrl(j), name: `${j.title}, ${j.company}` })) }];
+  const items = list.map((j) => {
+    const st = statusOf(j);
+    const when = st === 'closed' ? (j.deadline ? `Closed ${fmt(j.deadline)}` : 'Closed for this round') : j.deadline ? `Apply by ${fmt(j.deadline)}` : j.opens && j.opens > today ? `Opens ${fmt(j.opens)}` : (j.dateNote || '');
+    return `<li class="field-item${st === 'closed' ? ' is-closed' : ''}"><span class="badge badge-${st === 'open' ? 'open' : st === 'closed' ? 'closed' : 'upcoming'}">${LABEL[st]}</span>` +
+      `<a href="/internships/${esc(j.id)}/"><strong>${esc(j.title)}</strong></a><span class="field-co">${esc(j.company)} · ${esc(j.location)}</span><span class="field-when">${esc(when)}</span></li>`;
+  }).join('');
+  const others = fields.filter((f) => f !== field).map((f) => `<a class="chip" href="${fieldPath(f)}">${esc(f)}</a>`).join('');
+  return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${esc(h1)} (2027) | Bermuda Internship Board</title>
+  <meta name="description" content="${esc(desc)}">
+  <link rel="canonical" href="${url}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bermuda Internship Board">
+  <meta property="og:title" content="${esc(h1)}">
+  <meta property="og:description" content="${esc(desc)}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${SITE}/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  ${headCommon}
+${ld.map((l) => `  <script type="application/ld+json">${JSON.stringify(l).replace(/</g, '\\u003c')}</script>`).join('\n')}
+</head>
+<body class="employer">
+  ${header}
+  <main>
+    <section class="page-head hire-head photo-hero job-head">
+      <div class="wrap">
+        <a class="back" href="/#listings">← All Bermuda internships</a>
+        <p class="kicker">Bermuda Internship Board</p>
+        <h1>${esc(h1)}</h1>
+        <p class="lede">${list.length} ${list.length === 1 ? 'programme' : 'programmes'}${nOpen ? `, ${nOpen} open now` : ''}. Every listing links to the employer’s own posting, and the board is checked daily.</p>
+      </div>
+      <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,72 C220,8 470,6 720,52 C980,100 1210,104 1440,36 L1440,120 L0,120 Z"/></svg>
+    </section>
+    <div class="job-page"><div class="wrap">
+      <ul class="field-list">${items}</ul>
+      <h2 class="field-others-title">Other fields</h2>
+      <div class="chips">${others}</div>
+    </div></div>
+  </main>
+  ${footer}
+</body>
+</html>
+`;
+}
+for (const f of fields) {
+  const dir = path.join(out, 'internships-in-bermuda', slug(f));
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), fieldPage(f));
+}
+
+// Crawlable links on the board itself (app.js overwrites #results once listings load)
 const sorted = [...jobs].sort((a, b) => order[statusOf(a)] - order[statusOf(b)]);
 const list = '<div class="seo-list"><h2>Bermuda internships</h2><ul>' +
-  sorted.map((j) => `<li><a href="/internships/${esc(j.id)}/">${esc(j.title)}, ${esc(j.company)}</a> (${LABEL[statusOf(j)]})</li>`).join('') + '</ul></div>';
+  sorted.map((j) => `<li><a href="/internships/${esc(j.id)}/">${esc(j.title)}, ${esc(j.company)}</a> (${LABEL[statusOf(j)]})</li>`).join('') + '</ul>' +
+  '<h2>Browse by field</h2><ul>' + fields.map((f) => `<li><a href="${fieldPath(f)}">${esc(f)} internships in Bermuda</a></li>`).join('') + '</ul></div>';
 const index = fs.readFileSync(path.join(out, 'index.html'), 'utf8').replace('<div class="wrap" id="results"></div>', `<div class="wrap" id="results">${list}</div>`);
 fs.writeFileSync(path.join(out, 'index.html'), index);
 
 // Sitemap + robots
 const urls = [{ loc: `${SITE}/`, lastmod: data.updated }, { loc: `${SITE}/post.html` }]
+  .concat(fields.map((f) => ({ loc: SITE + fieldPath(f), lastmod: data.updated })))
   .concat(jobs.map((j) => ({ loc: pageUrl(j), lastmod: data.updated || j.added })));
 fs.writeFileSync(path.join(out, 'sitemap.xml'), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
   urls.map((u) => `  <url><loc>${u.loc}</loc>${u.lastmod ? `<lastmod>${u.lastmod}</lastmod>` : ''}</url>`).join('\n') + '\n</urlset>\n');
 fs.writeFileSync(path.join(out, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /thanks.html\n\nSitemap: ${SITE}/sitemap.xml\n`);
 
-console.log(`Built ${jobs.length} listing pages (${jobs.filter((j) => statusOf(j) === 'open').length} with JobPosting markup) into dist/`);
+console.log(`Built ${fields.length} field pages and ${jobs.length} listing pages (${jobs.filter((j) => statusOf(j) === 'open').length} with JobPosting markup) into dist/`);

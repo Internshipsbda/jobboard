@@ -485,3 +485,17 @@ body.employer .aside-card p, body.employer .aside-card ol { color: var(--text-se
   .job-page-card .timeline li + li { border-left: 0; border-top: 1px solid var(--border); }
   .job-page-card .facts { grid-template-columns: 1fr; }
 }
+/* Field landing pages (/internships-in-bermuda/<field>/) */
+.job-page-more { margin: 0; font-weight: 700; }
+.job-page-more a { text-decoration: none; }
+.field-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
+.field-item { display: grid; grid-template-columns: auto 1fr; gap: 4px var(--space-4); align-items: center; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-4) var(--space-5); }
+.field-item.is-closed { background: var(--slate-50); }
+.field-item .badge { grid-row: span 3; align-self: start; }
+.field-item a { color: var(--ink); text-decoration: none; font-family: var(--font-display); font-size: 18px; }
+.field-item a:hover { text-decoration: underline; }
+.field-co { color: var(--text-secondary); font-size: 15px; }
+.field-when { color: var(--text-muted); font-size: 14px; }
+.field-others-title { margin: var(--space-10) 0 var(--space-3); font-family: var(--font-display); font-size: 20px; }
+.chips a.chip { text-decoration: none; }
+@media (max-width: 560px) { .field-item { grid-template-columns: 1fr; } .field-item .badge { grid-row: auto; justify-self: start; } }
